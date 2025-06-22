@@ -1,0 +1,23 @@
+@mixin flex($direccion, $justificacion, $alineacion, $gap: 0)
+  display: flex
+  flex-direction: $direccion
+  justify-content: $justificacion
+  align-items: $alineacion
+  gap: $gap
+
+@mixin space($paddin, $margin, $gap)
+  padding: $paddin
+  margin: $margin
+  gap: $gap
+  
+
+@mixin text($color, $size, $weight: bold, $line-height: 1.5)
+  color: $color
+  font-size: $size
+  font-weight: $weight
+  line-height: $line-height
+
+@mixin img($width, $height, $border-radius)
+  width: $width
+  height: $height
+  border-radius: $border-radius
