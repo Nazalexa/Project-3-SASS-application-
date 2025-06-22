@@ -1,26 +1,28 @@
 body
-  background-color: #5781f588
+  background-color: $background-color
+  font-family: $font-family
 
 nav
-  @include flex(row, space-between, center)
-  @include space(0, 10px, 20px)
-  background-color: grey
+  width: 100%
+  @include flex (row, space-between, center)
+  @include space (10px, 0px, 30px)
+  background-color: $background-color
   .navbar-right
-    @include flex(row, space-between, center)
-    @include space(0, 10px, 10px)
+    @include flex (row, space-between, center)
+    @include space (10px, 0px, 30px)
   .navbar-left
-    @include flex(row, space-between, center)
-    @include space(0, 10px, 10px)
+    @include flex (row, space-between, center)
+    @include space (10px, 0px, 30px)
   div
-    @include flex(row, space-between, center)
-    @include space(0px, 0px, 0px)
+    @include flex (row, space-between, center)
+    @include space (10px, 0px, 30px)
   img
-    @include img(50px,50px, 0px)
+    @include img (50px,50px, 0px)
     cursor: pointer
 .btn-navbar
-  @include flex(row, center, center)
-  @include space(0px, 0px, 10px)
-  @include img(50px, 50px, 15px)
+  @include flex (row, center, center)
+  @include space (0px, 0px, 10px)
+  @include img (50px, 50px, 15px)
   border: none
   cursor: pointer
   :hover
@@ -29,6 +31,11 @@ nav
     padding: 8px
     border-radius: 15px
 
+  @include cell
+    display: none
+  @include tablet
+    display: block
+      
 .logo
   @include flex(row, center, center)
   @include space(0px, 0px, 0px)
@@ -46,14 +53,14 @@ header
 
 .header-video
   position: relative
-  width: 100vw
+  width: 100%
   height: 150%
   overflow: hidden
   video
     position: absolute
     top: 40%
     left: 20%
-    width: 158%
+    width: 168%
     height: 150%
     transform: translate(-50%, -50%)
     z-index: -1
@@ -64,10 +71,10 @@ header
     position: relative
     top: 0
     left: 0
-    width: 158%
+    width: 168%
     height: 150%
     background: rgba(0, 0, 0, 0.4)
-    z-index: 0
+    z-index: -1
 
 .header-content
   h1

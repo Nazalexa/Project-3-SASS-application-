@@ -1,45 +1,43 @@
 main
-  @include flex (flex, space-around, center,)
-  margin: 35px
+  font-family: $font-family
 
-  
-.btn-movie-selection-cartelera
+.main-content
+  margin: 20px
+  display: block
+  justify-items: evenly
+  font-family: $font-family
+
+.movie-selection-content
+  @include flex(row, space-evenly,center)
+
+.section-movie-card-grid
+  flex-wrap: wrap
+
+.btn-movie-selection
   background-color: $background-color
   color: $color-primary
   border: solid 2px
-  font-size: 40px
+  font-size: 35px
   border-radius: 16px
   cursor: pointer
   padding: 20px
   &:hover
     background-color: #797979
-
-.btn-movie-selection-preventa
-  background-color: $background-color
-  color: $color-primary
-  border: solid 2px
-  font-size: 40px
-  border-radius: 16px
-  cursor: pointer
-  padding: 20px
-  &:hover
-    background-color: #797979
-
-
-.btn-movie-selection-estrenos
-  background-color: $background-color
-  color: $color-primary
-  border: solid 2px
-  font-size: 40px
-  border-radius: 16px
-  cursor: pointer
-  padding: 20px
-  &:hover
-    background-color: #797979        
+  @include cell
+    display: none
+  @include tablet
+    display: block
+    flex-wrap: wrap
+    font-size: 20px
+    padding: 10px  
+  @include web
+    flex-wrap: wrap
+    font-size: 35px
+    padding: 20px           
 
 section
   h2 
-    @include text(black, 3rem, bold, 1.5)
+    @include text($color-primary, 3rem, bold, 1.5)
     margin: 0
     padding: 20px
     text-align: left
@@ -51,11 +49,10 @@ img
   border-radius: 30px
 
 .section-movie-card-grid
-  @include flex(row, space-between,center)
+  @include flex(row,space-around,center)
 
 .movie-card-grid
   margin: 30px
-  grid-gap: 20px
   cursor: pointer
   h3
     font-size: 30px
@@ -97,11 +94,12 @@ img
     transform: rotateY(-180deg)    
 .btn-movie-details
   font-size: 25px
-  background-color: #dea0e4
+  background-color: #000000
   border-radius: 20px
   width: 60%
+  color: #ffffff
   &:hover
-    background-color: #ffffff    
+    background-color: #b6b6b6    
 
 
 
